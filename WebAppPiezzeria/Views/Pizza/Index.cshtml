@@ -45,103 +45,35 @@
                                             </li>
                                         
                                             <p><a class="btn btn-primary" href="@Url.Action("Details", "Pizza",new{Id = pizzaNellaLista.Id})" role="button">Qui</a></p>
-                                
+                                           
+                                            <a class="btn btn-primary" href="@Url.Action("ModificaPizza", "Pizza", new{Id = pizzaNellaLista.Id})" role="button">Aggiungi Pizza</a>
+                                             <form class="d-inline" action="@Url.Action("EliminaPizza", "Pizza", new {id= pizzaNellaLista.Id})" method="post">
+                                             @Html.AntiForgeryToken()
+                                             <button type="submit" class="btn btn-danger">Elimina</button>
+                        </form>
                                         </ul>    
                     
                             </div>
                     </div>  
-                }
-         }     
-
- <!--              <div class="col-12 col-sm-3 text-center">
-                    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-                        <img class="img-fluid" src="https://usercontent.one/wp/www.fornellidistagione.com/wp-content/uploads/2021/06/pizza-boscaiola-1-2048x1365.jpg?media=1647952691" 
-                        class="card-img-top" alt="primaFoto">
-                    <div class="card-body p-0 pb-0">
-                        <h6 class="card-title text-uppercase bg-success pb-2 pt-2 text-white ">pizza boscaiola</h6>
-                        <p class="card-text ps-2 pe-2 mb-4 mt-3"><small>Pizza bianca con base mozzarella, salsiccia e funghi</small></p>
-                    </div>
-                    <ul class="list-group list-group-flush pb-0 mb-2">
-                        <li class="list-group-item text-success"><p><small>Prezzo:</small><br><span class="text-black fw-bold"><small>9,00€</small></span><span 
-                            class="text-secondary"></p></li>
-                            <p><a class="btn btn-primary" href="@Url.Action("Details", "Pizza", 1)" role="button">Qui</a></p>
-                    </ul>    
-                    
-                    </div>
-                </div>
                
-                <div class="col-12 col-sm-3">
-                    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-                        <img class="img-fluid" 
-                        src="https://i2.wp.com/www.50toppizza.it/wp-content/uploads/2020/06/102871168_818983905291884_5930790195292418392_o.jpg?fit=2048%2C1365&ssl=1" 
-                        class="card-img-top" alt="primaFoto">
-                    <div class="card-body p-0 pb-0">
-                        <h6 class="card-title text-uppercase bg-danger pb-2 pt-2 text-white ">camp in the snow</h6>
-                        <p class="card-text ps-2 pe-2 mb-4 mt-3"><small>Pizza base rossa con alici del cantabrico , orignano e olio d'oliva</small></p>
-                    </div>
-                    <ul class="list-group list-group-flush pb-0 mb-2">
-                        <li class="list-group-item text-danger"><p><small>Prezzo</small><br><span class="text-black fw-bold"><small>7,00€</small></span><span 
-                            class="text-secondary"></span></p></li> 
-                            <p><a class="btn btn-primary" href="@Url.Action("Details", "Pizza", 2)" role="button">Qui</a></p>
-                    </ul>    
-                    
-                    </div>
-                </div>
-                 
-                  <div class="col-12 col-sm-3">
-                    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-                        <img class="img-fluid" src="https://www.scattidigusto.it/wp-content/uploads/2020/09/pizza-margherita-Diametro-33-Napoli-1568x1045.jpg" 
-                        class="card-img-top" alt="primaFoto">
-                    <div class="card-body p-0 pb-0">
-                        <h6 class="card-title text-uppercase bg-danger pb-2 pt-2 text-white ">pizza diavola</h6>
-                        <p class="card-text ps-2 pe-2 mb-4 mt-3"><small> Pomodoro, mozzarella, basilico fresco, sale e olio</small></p>
-                    </div>
-                    <ul class="list-group list-group-flush pb-0 mb-2">
-                        <li class="list-group-item text-danger"><small>Prezzo:</small><br><span class="text-black fw-bold"><small>8,00€</small></span><span 
-                            class="text-secondary"></span></p></li>
-                            <p><a class="btn btn-primary" href="@Url.Action("Details", "Pizza", 3)" role="button">Qui</a></p>
-                    </ul>    
-                    
-                    </div>
-                </div>
-                 
-                  <div class="col-12 col-sm-3">
-                    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-                        <img class="img-fluid" src="https://www.scattidigusto.it/wp-content/uploads/2020/09/pizza-margherita-Diametro-33-Napoli-1568x1045.jpg" 
-                        class="card-img-top" alt="primaFoto">
-                    <div class="card-body p-0 pb-0">
-                        <h6 class="card-title text-uppercase bg-danger pb-2 pt-2 text-white ">pizza marinara</h6>
-                        <p class="card-text ps-2 pe-2 mb-4 mt-3"><small> Pomodoro, mozzarella, basilico fresco, sale e olio</small></p>
-                    </div>
-                    <ul class="list-group list-group-flush pb-0 mb-2">
-                        <li class="list-group-item text-danger"><small>Prezzo:</small><br><span class="text-black fw-bold"><small>8,00€</small></span><span 
-                            class="text-secondary"></span></p></li> 
-                            <p><a class="btn btn-primary" href="@Url.Action("Details", "Pizza", 4)" role="button">Qui</a></p>
-                    </ul>    
-                    
-                    </div>
-                </div>
+                }
+         
+            
+            }     
 
-                  <div class="col-12 col-sm-3">
-                    <div class="card shadow mb-5 bg-body rounded" style="width: 18rem;">
-                        <img class="img-fluid" src="https://www.scattidigusto.it/wp-content/uploads/2020/09/pizza-margherita-Diametro-33-Napoli-1568x1045.jpg" 
-                        class="card-img-top" alt="primaFoto">
-                    <div class="card-body p-0 pb-0">
-                        <h6 class="card-title text-uppercase bg-danger pb-2 pt-2 text-white ">pizza burrata</h6>
-                        <p class="card-text ps-2 pe-2 mb-4 mt-3"><small> Pomodoro, mozzarella, basilico fresco, sale e olio</small></p>
-                    </div>
-                    <ul class="list-group list-group-flush pb-0 mb-2">
-                        <li class="list-group-item text-danger"><small>Prezzo:</small><br><span class="text-black fw-bold"><small>8,00€</small></span><span 
-                            class="text-secondary"></span></p></li> 
-                            <p><a class="btn btn-primary" href="@Url.Action("Details", "Pizza", 5)" role="button">Qui</a></p>
-                    </ul>    
-                    
-                    </div>
-                </div>
 
--->  
 
           </div>
           
 </div>
+
+
+<div class = "container">
+
+
+    <h1> Tasto per aggiungere la pizza</h1>
+    <a class="btn btn-primary" href="@Url.Action("CreaPaginaPizza", "Pizza")" role="button">Aggiungi Pizza</a>
+    
+</div>
+
 
